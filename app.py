@@ -54,8 +54,11 @@ def serve_react(path):
 def home():
     return {"message": "Welcome to Work4Fun!"}
 
+# if __name__ == "__main__":
+#     with app.app_context():
+#         db.create_all()
+#         # seed_data()
+#     app.run(debug=True)
+
 if __name__ == "__main__":
-    with app.app_context():
-        db.create_all()
-        # seed_data()
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=5000)
